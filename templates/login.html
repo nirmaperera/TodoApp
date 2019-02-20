@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/auth.css') }}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Login</h1>
+    <hr>
+    <br>
+        <form method="POST">
+          <input type="text" placeholder="Enter Username" name="username">
+          <input class="enter" type="submit" value="Login">
+        </form>
+
+       <div class="redirect"></div>
+          <a href="register">Don't have a account?</a>
+          <a href="/">Go back to profile</a>
+      </div>
+    </div>
+</body>
+</html>
