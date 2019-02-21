@@ -72,7 +72,7 @@ def todo():
     return render_template('todo.html', todos=todo)
 
 
-# # the todo route
+# add a todo route
 @app.route('/add', methods=['GET', 'POST'])
 def get_a_todo():
 
@@ -92,7 +92,7 @@ def get_a_todo():
             return redirect(url_for('todo', todos=todo))
     return render_template('todo.html')
 
-
+# delete route
 @app.route('/delete', methods=['GET', 'POST'])
 def delete():
 
@@ -108,7 +108,7 @@ def delete():
     else:
         return render_template('todo.html')
 
-
+# complete route
 @app.route('/complete', methods=['GET', 'POST'])
 def completed():
 
@@ -125,7 +125,7 @@ def completed():
     else:
         return render_template('todo.html')
 
-
+# logout route
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
 
