@@ -102,7 +102,7 @@ def delete():
         item_id = request.form['todoId']
 
         url = "https://hunter-todo-api.herokuapp.com/todo-item/"+item_id
-        r = requests.delete(
+        requests.delete(
             url,  cookies=c)
         return redirect(url_for('todo'))
     else:
@@ -119,7 +119,7 @@ def completed():
         payload2 = {'completed': True}
         url = "https://hunter-todo-api.herokuapp.com/todo-item/"+item_id
 
-        r = requests.put(
+        requests.put(
             url, json=payload2, cookies=c)
         return redirect(url_for('todo'))
     else:
@@ -130,7 +130,6 @@ def completed():
 def logout():
 
     if request.method == 'POST':
-        item_id = request.form['logout']
         return render_template('logout.html')
     else:
         return render_template('todo.html')
