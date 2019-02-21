@@ -131,7 +131,7 @@ def logout():
 
     if request.method == 'POST':
         item_id = request.form['logout']
-        return redirect(url_for('login'))
+        return render_template('logout.html')
     else:
         return render_template('todo.html')
 
