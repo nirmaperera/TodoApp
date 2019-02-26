@@ -6,7 +6,7 @@ GOAL:
 ○ IMPORTANT: the data should be persistent. 
 
 INSTRUCTIONS TO RUN:
-Go to project folder
+Go to project folder >
 flask run
 
 LIVE DEMO: https://nirma-todo.herokuapp.com
